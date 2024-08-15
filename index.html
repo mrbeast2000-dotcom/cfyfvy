@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            var s1 = new Array(); //Empty array
+            var s2 = []; //Empty array # s2 = {}: Objects
+        */
+       var s1 = new Array("Monday", "Tuesday", "Wednesday");
+       var s2 = ["a135", "b135", "c135"];
+       with(document){
+        write("<h1> Dùng phương thức joinI()</h1>");
+        write(s1.join(" | "));
+        write("<br>");
+        write(s2.join(" | "));
+        //The push() method adds new items to the end of an array.
+        s1.push("Thursday", "Friday", "Saturday", "Sunday");
+        s2.push("d246", "e246", "f246", "g246");
+
+        //Dùng vòng lặp thường.
+        write("<h1>Dùng vòng lặp thường</h1>");
+        for(var i = 0; i < s1.length; i++){
+            write(" - " + s1[i]);
+        }
+        write("<p>");
+        for(var i = 0; i < s2.length; i++){
+            write(" - " + s2[i]);
+       }
+       //Dùng vòng lặp for each
+       write("<h1> Dùng vòng lặp for each</h1>");
+       for(day in s1){
+        write(" + " + s1[day]);
+       }
+       write("<p>");
+        for(index in s2){
+            write(" + " + s2[index]);
+        }
+    }
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
